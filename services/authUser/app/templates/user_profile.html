@@ -1,0 +1,40 @@
+{% extends 'home.html' %}
+
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message" id="flash-message-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+  <div class="user-details-container">
+    <div class="user-info">
+      <h3>User Details</h3>
+      <br>
+      <div class="edit-section">
+        <label>First Name: </label>
+        <span id="first_name">{{ current_user.first_name }}</span>
+        <a href="{{ url_for('editUser_bp.edit_page', field_name='first_name') }}">Edit</a>
+      </div>
+      <br><br>
+      <div class="edit-section">
+        <label>Last Name: </label>
+        <span id="last_name">{{ current_user.last_name }}</span>
+        <a href="{{ url_for('editUser_bp.edit_page', field_name='last_name') }}">Edit</a>
+      </div>
+      <br><br>
+      <div class="edit-section">
+        <label>Email: </label>
+        <span id="email">{{ current_user.email }}</span>
+        <a href="{{ url_for('editUser_bp.edit_page', field_name='email') }}">Edit</a>
+      </div>
+      <br><br>
+      <label>Total No. of Posts: </label> <!-- You can add the logic for the number of posts -->
+      <br><br>
+      <label>Total No. of Views: </label> <!-- You can add the logic for the number of views -->
+    </div>
+  </div>
+{% endblock %}

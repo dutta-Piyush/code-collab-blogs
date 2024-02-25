@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message" id="flash-message-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <div class="login-container">
+    <form method="POST" action="#">
+      {{ form.hidden_tag() }}
+
+      <div class="form-group">
+        <label for="{{ form.email.id }}">{{ form.email.label }}</label>
+        {{ form.email(class="form-control", placeholder="Enter your email") }}
+      </div>
+
+      <div class="form-group">
+        <label for="{{ form.password.id }}">{{ form.password.label }}</label>
+        {{ form.password(class="form-control", placeholder="Enter your password") }}
+      </div>
+
+      <div class="form-group">
+        {{ form.submit(class="btn btn-primary", value="Login") }}
+      </div>
+    </form>
+  </div>
+{% endblock %}

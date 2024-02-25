@@ -1,0 +1,40 @@
+{% extends 'home.html' %}
+<!--In Flask-WTF, when you use {{ form.field_name }}, it will automatically populate the form field with the current value-->
+<!--of the corresponding attribute in the form. If you want to display the input field with the current value but also-->
+<!--allow the user to edit it, you should use {{ form.field_name(class="form-control") }} instead.-->
+{% block content %}
+  {% with  messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message" id="flash-message-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+<h2>Edit Profile</h2>
+<form method="POST" action="{{ url_for('editUser_bp.edit_page', field_name=field_name) }}">
+    {{ form.hidden_tag() }}
+
+    {% if field_name == 'first_name' %}
+        <div class="form-group">
+            {{ form[field_name].label }}
+            {{ form[field_name] }}
+        </div>
+    {% elif field_name == 'last_name' %}
+        <div class="form-group">
+            {{ form[field_name].label }}
+            {{ form[field_name] }}
+        </div>
+    {% elif field_name == 'email' %}
+        <div class="form-group">
+            {{ form[field_name].label }}
+            {{ form[field_name] }}
+        </div>
+    {% endif %}
+
+    <div class="form-group">
+        {{ form.submit }}
+    </div>
+</form>
+{% endblock %}
