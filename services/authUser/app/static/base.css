@@ -1,0 +1,22 @@
+.flash-message {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+#flash-message-success {
+  background-color: #5cb85c;  /* Green for success */
+}
+
+#flash-message-error {
+  background-color: #d9534f;  /* Red for error */
+}
+
+#flash-message-info {
+  background-color: #5bc0de;  /* Blue for info */
+}
+
+#flash-message-warning {
+  background-color: #f0ad4e;  /* Orange for warning */
+}

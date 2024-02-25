@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% endif %}
+    <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/login.css">
+    <link rel="stylesheet" href="../static/register.css">
+    <link rel="stylesheet" href="../static/user_profile.css">
+</head>
+<body>
+    <div>
+        {% include 'header.html' %}
+    </div>
+    <div>
+        {% block content %} {% endblock %}
+    </div>
+    <div>
+        {% include 'footer.html' %}
+    </div>
+
+
+</body>
+</html>
