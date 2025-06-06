@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, flash
+from flask import Blueprint, render_template, redirect, url_for, flash, jsonify
 from werkzeug.security import generate_password_hash
 from ...model import User, db
 from .form import RegisterForm
@@ -6,6 +6,7 @@ from flask_login import current_user
 import uuid
 
 register_bp = Blueprint('register_bp', __name__)
+api_bp = Blueprint('api_bp', __name__)
 
 
 @register_bp.route('/register', methods=['POST', 'GET'])

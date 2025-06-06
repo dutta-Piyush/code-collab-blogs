@@ -1,0 +1,35 @@
+__pycahche__
+app/__pycahche__
+services/authUser/app/*__pycahche__
+services/*__pycahche__
+services\authUser\app\blueprints\register\__pycache__
+# Bytecode files
+__pycache__/
+*.py[cod]
+
+*.pyc
+
+# Database files
+*.db
+*.sqlite3
+
+# VS Code and JetBrains IDE configs
+.vscode/
+.idea/
+*.iml
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Environment files
+.env
+.env.*
+
+# Node modules and dist folders (if using frontend)
+node_modules/
+dist/

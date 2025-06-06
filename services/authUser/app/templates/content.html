@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      {% for category, message in messages %}
+        <div class="flash-message" id="flash-message-{{ category }}">
+          {{ message }}
+        </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+    <h1>Create a new blog post</h1>
+
+    <form method="POST" action="{{ url_for('content_bp.content_page') }}">
+        {{ form.hidden_tag() }}
+
+        <div class="form-group">
+            {{ form.title.label(for="title", id="title-label") }}
+            {{ form.title(id="title", class="form-control") }}
+        </div>
+
+        <div class="form-group">
+            {{ form.body.label(for="body", id="body-label") }}
+            {{ form.body(id="body", class="form-control") }}
+        </div>
+
+        {{ form.submit(id="submit-btn", class="btn btn-primary") }}
+    </form>
+{% endblock %}

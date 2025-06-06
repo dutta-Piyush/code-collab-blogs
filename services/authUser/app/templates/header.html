@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="../static/header.css">
-</head>
 <body>
 
     <header id="company-header">
-        <div class="company-name">Your Company Name</div>
+        <div class="company-name">VIKAS Blogs</div>
         <div class="user-section" id="user-section">
             <ul class="user-links">
                 {% if current_user.is_authenticated %}
@@ -22,6 +14,7 @@
                 {% endif %}
                 {% if current_user.is_authenticated %}
                     <li><a href="{{ url_for('userProfile_bp.user_page') }}">Profile</a></li>
+                    <li><a href="{{ url_for('content_bp.content_page') }}">Post Blogs</a></li>
                     <li><a href="{{ url_for('logout_bp.logout_page') }}">Logout</a></li>
                 {% endif %}
             </ul>

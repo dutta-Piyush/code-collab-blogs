@@ -1,0 +1,17 @@
+/* Styles for the footer with id "page-footer" */
+#page-footer {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    height: 80px;
+}
+
+/* Center the content within the footer */
+#page-footer p {
+    margin: 0;
+}

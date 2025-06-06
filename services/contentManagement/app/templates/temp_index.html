@@ -1,0 +1,9 @@
+<h1>This is the content section</h1>
+
+{% if contents: %}
+    {% for content in contents %}
+        {{ content.c_id }}
+        {{ content.title }}
+        <br/><br/><br/>
+    {% endfor %}
+{% endif %}

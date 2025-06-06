@@ -1,0 +1,14 @@
+# postgresql://<user>:<password>@localhost:<port>/<database>
+
+
+
+
+
+# DATABASE_URL_IMAGE = postgresql://admin:admin123@postgresdb:5432/code_collab_blogs # postgresql://<user>:<password>@<postgres_container_name>:5432/<database>
+
+# POSTGRES_USER=postgres
+# POSTGRES_PASSWORD=postgres
+# POSTGRES_DB=mydatabase
+
+# PGADMIN_EMAIL=admin@example.com
+# PGADMIN_PASSWORD=admin

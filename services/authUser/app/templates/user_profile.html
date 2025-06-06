@@ -10,31 +10,47 @@
       {% endfor %}
     {% endif %}
   {% endwith %}
+
   <div class="user-details-container">
+    <div class="user-content-container">
+      {% if user_content %}
+        {% for content in user_content %}
+          <div class="content-box">
+            <h4>{{ content.title }}</h4>
+            <p>{{ content.content }}</p>
+            <p>Author: {{ content.id }}</p>
+            <a href="#">Edit</a> <a href="#">Delete</a>
+          </div>
+          <br/><br/>
+        {% endfor %}
+      {% endif %}
+    </div>
+
     <div class="user-info">
-      <h3>User Details</h3>
+      <h2>User Details</h2>
       <br>
       <div class="edit-section">
-        <label>First Name: </label>
+        <label><strong>First Name: </strong></label>
         <span id="first_name">{{ current_user.first_name }}</span>
         <a href="{{ url_for('editUser_bp.edit_page', field_name='first_name') }}">Edit</a>
       </div>
-      <br><br>
+      <br>
       <div class="edit-section">
-        <label>Last Name: </label>
+        <label><strong>Last Name: </strong></label>
         <span id="last_name">{{ current_user.last_name }}</span>
         <a href="{{ url_for('editUser_bp.edit_page', field_name='last_name') }}">Edit</a>
       </div>
-      <br><br>
+      <br>
       <div class="edit-section">
-        <label>Email: </label>
+        <label><strong>Email: </strong></label>
         <span id="email">{{ current_user.email }}</span>
         <a href="{{ url_for('editUser_bp.edit_page', field_name='email') }}">Edit</a>
       </div>
+      <br>
+      <label><strong>Total No. of Posts: </strong></label> <!-- You can add the logic for the number of posts -->
       <br><br>
-      <label>Total No. of Posts: </label> <!-- You can add the logic for the number of posts -->
-      <br><br>
-      <label>Total No. of Views: </label> <!-- You can add the logic for the number of views -->
+      <label><strong>Total No. of Views: </strong></label> <!-- You can add the logic for the number of views -->
     </div>
   </div>
+
 {% endblock %}

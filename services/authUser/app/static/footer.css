@@ -1,17 +1,29 @@
-/* Styles for the footer with id "page-footer" */
+/* footer.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #page-footer {
     background-color: #000;
     color: #fff;
-    padding: 10px;
     text-align: center;
+    padding: 10px;
     position: fixed;
     bottom: 0;
-    width: 100%;
     left: 0;
-    height: 80px;
+    width: 100%;
+    /*height: 80px; */
+    box-sizing: border-box;
+    border-top: 5px solid #fff; /* Adjust the border size as needed */
+    z-index: 1000; /* Ensure it's on top of other content */
 }
 
-/* Center the content within the footer */
 #page-footer p {
-    margin: 0;
+    margin-top: 5px;
+    padding-top: 5px;
 }
+
+/* Add additional styling based on your design preferences */

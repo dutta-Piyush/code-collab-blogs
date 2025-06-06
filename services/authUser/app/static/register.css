@@ -1,33 +1,63 @@
+/* register.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D3D3D3; /* Set a light background color */
+    padding-top: 5px; /* Adjust this value based on the height of your fixed header */
+}
+
+#center-content {
+    text-align: center;
+    padding: 50px 20px; /* Add padding from top and bottom */
+}
+
 .registration-form-container {
-  max-width: 400px;
-  margin: auto;
+    max-width: 400px;
+    margin: 50px auto; /* Center the registration container with margin and add space from top */
+    background-color: #fff;
+    padding: 30px; /* Increase padding for a cleaner look */
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
-  margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
-label {
-  display: block;
-  margin-bottom: 5px;
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  box-sizing: border-box;
+.form-control {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    transition: border-color 0.2s ease-in-out;
+    font-size: 16px;
 }
 
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.form-control:focus {
+    border-color: #007bff;
 }
 
-button:hover {
-  background-color: #45a049;
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Add additional styling based on your design preferences */

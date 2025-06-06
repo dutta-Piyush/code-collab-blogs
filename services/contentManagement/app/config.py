@@ -1,0 +1,4 @@
+class ProjConfig:
+    SECRET_KEY = "b5c264c248a78049777ca91db165ad40076e1249e1351512da1f92b3afba60fa"
+    SQLALCHEMY_DATABASE_URI = "sqlite:///Content.db"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False

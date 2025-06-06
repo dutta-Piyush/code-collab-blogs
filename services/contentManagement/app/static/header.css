@@ -1,0 +1,36 @@
+#company-header {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+     height: 50px;
+}
+
+#company-header .company-name {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#company-header #user-section {
+    position: absolute; /* Add position absolute to remove the login section from the document flow */
+    top: 25px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+    z-index: 1; /* Set a higher z-index to ensure it appears above the company name */
+}
+
+#company-header .user-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#company-header .user-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#company-header .user-links a {
+    color: #fff;
+    text-decoration: none;
+}
