@@ -5,10 +5,14 @@
     {% if title %}
         <title>{{ title }}</title>
     {% endif %}
+    <link rel="stylesheet" href="../static/header.css">
+    <link rel="stylesheet" href="../static/footer.css">
     <link rel="stylesheet" href="../static/base.css">
+    <link rel="stylesheet" href="../static/home.css">
     <link rel="stylesheet" href="../static/login.css">
     <link rel="stylesheet" href="../static/register.css">
     <link rel="stylesheet" href="../static/user_profile.css">
+    <link rel="stylesheet" href="../static/edit_profile.css">
 </head>
 <body>
     <div>
@@ -20,7 +24,5 @@
     <div>
         {% include 'footer.html' %}
     </div>
-
-
 </body>
 </html>

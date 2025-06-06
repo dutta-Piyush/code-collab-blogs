@@ -1,36 +1,54 @@
+/* header.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 70px; /* Adjust this value based on the height of your fixed header */
+    box-sizing: border-box;
+}
+
 #company-header {
     background-color: #000;
     color: #fff;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
-    position: relative;
-     height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 3px solid #fff; /* Adjust the border size as needed */
+    z-index: 1000; /* Ensure it's on top of other content */
 }
 
-#company-header .company-name {
-    font-size: 32px;
+.company-name {
+    font-size: 24px;
     font-weight: bold;
 }
 
-#company-header #user-section {
-    position: absolute; /* Add position absolute to remove the login section from the document flow */
-    top: 25px; /* Adjust the top position as needed */
-    right: 10px; /* Adjust the right position as needed */
-    z-index: 1; /* Set a higher z-index to ensure it appears above the company name */
+.user-section {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
 }
 
-#company-header .user-links {
+.user-links {
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
 }
 
-#company-header .user-links li {
+.user-links li {
     display: inline-block;
-    margin-right: 10px;
+    margin-left: 15px; /* Adjust the margin */
 }
 
-#company-header .user-links a {
+.user-links a {
     color: #fff;
     text-decoration: none;
+}
+
+.user-links p {
+    margin: 0;
 }

@@ -1,0 +1,3 @@
+git status --ignored
+git rm -r --cached src/__pycache__
+git add .gitignore && git commit -m "Update .gitignore to properly handle Python cache files"

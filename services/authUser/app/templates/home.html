@@ -1,14 +1,33 @@
-{% extends 'base.html' %}
 
-{% block content %}
-  {% with messages = get_flashed_messages(with_categories=true) %}
-    {% if messages %}
-      {% for category, message in messages %}
-        <div class="flash-message" id="flash-message-{{ category }}">
-          {{ message }}
-        </div>
-      {% endfor %}
-    {% endif %}
-  {% endwith %}
-  <h1>This is my home page</h1>
-{% endblock %}
+  {% extends 'base.html' %}
+
+  {% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <div class="flash-message alert alert-{{ category }}" id="flash-message-{{ category }}">
+            {{ message }}
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <div class="container">
+      <h1>This is my home page</h1>
+
+      <div class="blog-posts">
+        {% if contents %}
+          {% for content in contents %}
+            <div class="blog-post">
+              <div class="post-content">
+                <h5>{{ content.title }}</h5>
+                <p>{{ content.content }}</p>
+                <p class="author">ID: {{ content.id }}</p>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+
+  {% endblock %}

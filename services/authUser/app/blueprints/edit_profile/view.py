@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template, url_for, flash, redirect, request
 from flask_login import current_user
 from wtforms.validators import DataRequired, Length, Email
+from flask_login import login_required
 from ...model import db
 from .form import EditForm
 from ...model import User
@@ -9,6 +10,7 @@ editUser_bp = Blueprint('editUser_bp', __name__)
 
 
 @editUser_bp.route('/editProfile/<field_name>', methods=['POST', 'GET'])
+@login_required
 def edit_page(field_name):
     form = EditForm()
     # Get the field object from the form

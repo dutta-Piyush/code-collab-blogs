@@ -1,45 +1,54 @@
+/* user_profile.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #D3D3D3; /* Set a light background color */
+    padding-top: 70px; /* Adjust this value based on the height of your fixed header */
+}
+
 .user-details-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.user-content-container {
+    width: 70%; /* Set user-content-container to take 70% of the width */
+    overflow-y: auto; /* Make the container scrollable */
+    max-height: calc(100vh - 70px); /* Adjusted maximum height to account for the header */
 }
 
 .user-info {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-
-h3 {
-  color: #007bff;
-}
-
-label {
-  display: inline-block;
-  margin-bottom: 5px;
-  font-weight: bold;
+    width: 30%; /* Set user-info to take 30% of the width */
 }
 
 .edit-section {
-  display: flex;
-  align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
 }
 
-button {
-  margin-left: 10px;
-  padding: 5px 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
+.content-box {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-  background-color: #0056b3;
+/* Add additional styling based on your design preferences */
+
+/* Additional style for the footer to ensure it stays at the bottom */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    padding: 10px;
+    text-align: center;
 }
