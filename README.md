@@ -19,10 +19,6 @@ This project is a collaborative blogging platform built using Flask, a lightweig
 ### Database
 - **SQLite**: A lightweight, file-based database used for storing user data and content.
 
-### Development Tools
-- **Python**: The primary programming language used for backend development.
-- **Virtual Environment**: Used to manage project dependencies and isolate the development environment.
-
 ## Project Structure
 
 ### Root Directory
@@ -98,12 +94,6 @@ This project is a collaborative blogging platform built using Flask, a lightweig
 - **Flask-WTF**: `pip install Flask-WTF`
 - **Flask-SQLAlchemy**: `pip install Flask-SQLAlchemy`
 - **SQLAlchemy**: `pip install SQLAlchemy`
-
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## Contributors
-- [Your Name](https://github.com/yourusername)
 
 ## Acknowledgments
 - Thanks to the Flask community for their excellent documentation and support.
